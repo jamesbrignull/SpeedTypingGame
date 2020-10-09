@@ -10,9 +10,8 @@ function App() {
     }
   
   function countWords(str) {
-    const wordsArray = str.split(' ').length
-    console.log(wordsArray)
-    return wordsArray
+    const wordsArray = str.trim().split(' ')
+    return wordsArray.filter(word => word !== '').length
   }
 
 console.log(text)
