@@ -9,6 +9,11 @@ function App() {
     setText(value)
     }
   
+  function countWords(str) {
+    const wordsArray = str.split(' ').length
+    console.log(wordsArray)
+    return wordsArray
+  }
 
 console.log(text)
     return (
@@ -19,7 +24,10 @@ console.log(text)
           value={text}>
         </textarea>
         <h4>Time remaining</h4>
-        <button>Start game</button>
+        <button 
+          onClick={() => countWords(text)}
+        >Start game
+        </button>
         <h1>Word count</h1>
       </div>
     );
