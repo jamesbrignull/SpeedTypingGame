@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [text, setText] = useState('')
+
+  function handleChange(event) {
+    const { value } = event.target
+    setText(value)
+    }
+  
+
+console.log(text)
+    return (
+      <div className="App">
+        <h1>HOW FAST DO YOU TYPE?</h1>
+        <textarea 
+          onChange={handleChange}
+          value={text}>
+        </textarea>
+        <h4>Time remaining</h4>
+        <button>Start game</button>
+        <h1>Word count</h1>
+      </div>
+    );
 }
 
 export default App;
