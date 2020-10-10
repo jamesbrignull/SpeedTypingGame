@@ -2,7 +2,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import './App.css';
 
 function App() {
-  const STARTING_TIME = 10
+  const STARTING_TIME = 30
 
   const [text, setText] = useState('')
   const [time, setTime] = useState(STARTING_TIME)
@@ -24,6 +24,7 @@ function App() {
     setIsTimeRun(true)
     setTime(STARTING_TIME)
     setText('')
+    textBoxRef.current.disabled = false
     textBoxRef.current.focus()
   }
 
