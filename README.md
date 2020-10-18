@@ -2,7 +2,7 @@
 ## Overview
 A retro-styled game designed to see how many words you type in a given time slot.
 
-## Tech Stack Used
+## Tech & Tools
 * React
 * HTML
 * CSS
